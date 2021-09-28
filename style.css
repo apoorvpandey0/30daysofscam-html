@@ -1,4 +1,8 @@
+body{
+    font-family: cursive;
+}
 .nav{
+    font-family: 'Cookie';
     display: flex;
     justify-content: center;
     align-items: center;
