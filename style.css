@@ -49,7 +49,8 @@ body{
     font-weight: normal;
     padding-bottom: 34px;
     color: #4285F4;
-    animation: color 20s infinite ease-in-out both;
+    text-transform: uppercase;
+    animation: color 10s infinite ease-in-out both;
 
 }
 
@@ -70,21 +71,6 @@ body{
     }
     75%{
         color: #0F9D58;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .about{
-        box-sizing: border-box;
-        padding: 0 70px;
-    }
-    .logo-img{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .logo-img .logos{
-        height: 80px;
     }
 }
 
@@ -127,6 +113,33 @@ hr.one{
     transition: 0.5s;
 }
 
+.logo-img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logo-img .logos{
+    height: 80px;
+}
+
+@media screen and (min-width: 1200px) {
+    .about{
+        box-sizing: border-box;
+        padding: 0 70px;
+    }
+    .logo-img{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .logo-img .logos{
+        height: 80px;
+    }
+}
 
 
 @media screen and (max-width: 950px) {
@@ -143,18 +156,44 @@ hr.one{
         margin: auto;
                
     }
-
-    .nav{
-        justify-content: space-between;
-        font-size: 24px;
+    
+    .nav h2{
+        font-size: 3rem;
+        /* background: #000; */
+        width: 40%;
     }
-
-    .subheading{
-        font-size: 17px;
+    
+    .nav img{
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+        margin-right:34px ;
+        transition: 0.5s;
+    }
+    
+    .subheading h2{
+        font-weight: 600;
+        font-size: 1.5rem;
         text-align: center;
-
     }
 
 
+    
+}
+
+@media (max-width: 500px) {
+    .about{
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    footer{
+        height: 70vh;
+    }
+    .logo-img{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     
 }
