@@ -3,6 +3,7 @@
 body{
     font-family: 'Work Sans', sans-serif;
     margin: 0;
+    background-color: whitesmoke;
 }
 .nav{
     font-family: 'Cookie';
@@ -97,12 +98,12 @@ hr.one{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
     gap: 15px;
-    width: 90%;
+    width: 97%;
     margin: auto;
 }
 
 .images img{
-    height: auto;
+    height: 450px;
     width: 400px;
     background-size: cover;
     border-radius: 5px;
@@ -128,7 +129,7 @@ hr.one{
 @media screen and (min-width: 1200px) {
     .about{
         box-sizing: border-box;
-        padding: 0 70px;
+        padding: 30px 40px;
     }
     .logo-img{
         display: flex;
@@ -138,11 +139,19 @@ hr.one{
     }
     .logo-img .logos{
         height: 80px;
+        margin-bottom: 40px;
     }
 }
 
 
 @media screen and (max-width: 950px) {
+    
+    .about{
+        box-sizing: border-box;
+        padding: 30px 40px;
+        
+    }
+    
     .images{
         display: flex;
         align-items: center;
@@ -192,6 +201,7 @@ hr.one{
     .logo-img{
         height: 100%;
         display: flex;
+        margin-bottom: 3px;
         flex-direction: column;
         justify-content: space-between;
     }
