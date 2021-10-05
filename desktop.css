@@ -1,0 +1,23 @@
+@import "./assets/Fonts/font.css";
+
+@media (min-width: 1380px){
+    .header{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        height: 60px;
+        padding: 0 15px;
+
+        color: rgb(104, 104, 104);
+        font-size: 1.3rem;
+        font-family: 'Product Sans Medium Regular';
+
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        
+    }
+    .header .title span{
+        font-size: 1.4rem;
+        font-family: 'Product Sans Bold';
+
+    }
+}
