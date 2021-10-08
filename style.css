@@ -6,7 +6,7 @@ body{
     margin: 0;
     background-color: whitesmoke;
 }
-.header{
+.desktop{
     display: none;
 }
 .nav{
@@ -23,12 +23,23 @@ body{
 }
 
 .nav h2{
+    font-family: 'Cookie';
     font-size: 5rem;
     background: rgb(12, 12, 12);
     background: -webkit-linear-gradient(0deg, #4285F4 0% 25%, #DB4437 25% 50%, #F4B400 50% 75%, #0F9D58 75% 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.5s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
+main{
+    font-family: 'Product Sans Light Regular';
+}
+h2{
+    font-family: 'Product Sans Regular';
+}
+h3{
+    font-family: 'Product Sans Thin Regular';
+    font-size: 1.1rem;
 }
 
 .nav img{
@@ -129,6 +140,46 @@ hr.one{
 .logo-img .logos{
     height: 80px;
 }
+
+.card-container{
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card-container .card{
+    position: relative;
+
+}
+.card-container .card img{
+    width: 50px;
+    border-radius: 50%;
+}
+.card-container .card .name{
+    position: absolute;
+    font-family: 'Product Sans Medium Regular';
+    left: 50%;
+    top: 0;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    padding: 5px;
+    min-height: 20px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: rgb(65, 65, 65);
+    color: #fff;
+    opacity: 0;
+    transition: 0.2s;
+    z-index: 3;
+}
+.card-container .card:hover .name{
+    opacity: 1;
+}
+
 
 @media screen and (min-width: 1200px) {
     .about{

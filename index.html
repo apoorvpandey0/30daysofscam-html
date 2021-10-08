@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>30 days of scam</title>
-<link rel="icon" href="./assets/icons/guugle.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/icons/guugle.svg" type="image/svg+xml">
     <link rel="stylesheet" href="desktop.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
+    <div class="desktop header">
         <img src="./assets/icons/cloud.svg" alt="" width=40>
         <div class="title">
             <span>Guugle</span> Scam
@@ -20,8 +20,11 @@
         <img class="ji" src="assets/modiji2.jpg" alt="har ghar modi">
         <h2>30 days of scam</h2>
         
+        <!-- this will only work for screens with width > 1380px -->
+        <div class="desktop sub">Developed by guugle and government of bindia</div>
     </nav>
     <main>
+        <!-- this will only work for screens with width < 1380px -->
         <div class="subheading">
             <h2>Developed by guugle and government of bindia</h2>
         </div>
@@ -58,6 +61,9 @@
         <!-- div for about -->
         <div class="about">
             <h2>About us</h2>
+            <div class="card-container">
+                
+            </div>
             <h3>If you feel to contribute to the site visit this repository, we are open to all suggestions and content</h3>
             <a class="link" href="https://github.com/apoorvpandey0/30daysofscam-html">Click Me</a>
             <hr class="one">
@@ -83,5 +89,28 @@
         
         </div>
     </footer>
+
+
+    <script>
+        let request = new XMLHttpRequest();
+        request.open('GET', 'https://api.github.com/repos/apoorvpandey0/30daysofscam-html/contributors', true);
+
+        let cardContainer = document.querySelector("main .about .card-container");
+
+        request.onload = function(){
+            let data = JSON.parse(this.response);
+            for(let i=0; i<data.length; i++){
+                let card = document.createElement("div");
+                card.classList.add("card");
+                let cardDetails =`<a href=${data[i].html_url} target="_blank"><img src=${data[i].avatar_url} alt=""></a>
+                                  <div class="name">${data[i].login}</div>`;
+                card.innerHTML = cardDetails;
+                cardContainer.appendChild(card);
+                // console.log("Name :"+data[i].login+", Profile link:"+data[i].html_url+", Avatar:"+data[i].avatar_url);
+
+            }
+        }
+        request.send();
+    </script>
 </body>
 </html>
